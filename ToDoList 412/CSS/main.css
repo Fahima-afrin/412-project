@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Themes */
+.standard {
+  background-image: linear-gradient(100deg, #e1f5e1, #e1f5e1);
+  color: black;
+}
+
+.light {
+  background-image: linear-gradient(100deg, #e6e7b9, #e6e7b9);
+  color: black;
+}
+
+.darker {
+  background-image: linear-gradient(100deg, #060829, #060829);
+  color: white;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Top-right controls */
+.top-right-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.theme-switcher button {
+  padding: 8px 12px;
+  background-color: #cbd5e1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.theme-switcher button:hover {
+  background-color: #a1acc3;
+}
+
+.reset-btn {
+  padding: 8px 12px;
+  background-color: #f87171;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #ef4444;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 0.5in;
+}
+
+.todo-input,
+.todo-date,
+.todo-btn {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.todo-input {
+  min-width: 300px;
+  color: black;
+  background-color: white;
+}
+
+.todo-btn {
+  cursor: pointer;
+  background-color: #6FA3EF;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.todo-btn:hover {
+  background-color: #4D82DB;
+}
+
+/* Filter dropdown */
+.filter-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#filter-select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Task List */
+#todo-list {
+  list-style: none;
+  max-width: 700px;
+  width: 100%;
+  margin: 48px auto 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.todo-item {
+  flex-grow: 1;
+  font-size: 18px;
+  color: black;
+}
+
+/* Buttons */
+.check-btn,
+.delete-btn,
+.favorite-btn {
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Check (Done) Button */
+.green-btn {
+  background-color: #D1FAE5;
+  border: 2px solid #10B981;
+  color: #10B981;
+}
+.green-btn i {
+  color: #10B981;
+}
+
+/* Delete Button */
+.red-btn {
+  background-color: #FEE2E2;
+  border: 2px solid #EF4444;
+  color: #EF4444;
+}
+.red-btn i {
+  color: #EF4444;
+}
+
+/* Favorite Button */
+.favorite-btn {
+  background-color: #fff8dc;
+  border: 2px solid gold;
+  color: gold;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+.favorite-btn i.fas {
+  color: gold;   /* solid star */
+}
+.favorite-btn i.far {
+  color: gray;   /* outline star */
+}
+
+/* Completed Tasks */
+.completed .todo-item {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Deletion animation */
+.fall {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+/* Quote box */
+#quote-box {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #fffbe6;
+  border-radius: 6px;
+  font-size: 14px;
+  color: black;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+.todo-time {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filter-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#filter-select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.favorite-btn {
+  background-color: #fff8dc;
+  border: 2px solid gold;
+  color: gold;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.favorite-btn i.fas {
+  color: gold;
+}
+
+.favorite-btn i.far {
+  color: gray;
+}
+
+.check-btn,
+.delete-btn {
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.green-btn {
+  background-color: #D1FAE5;
+  border: 2px solid #10B981;
+  color: #10B981;
+}
+
+.green-btn i {
+  color: #10B981;
+}
+
+.red-btn {
+  background-color: #FEE2E2;
+  border: 2px solid #EF4444;
+  color: #EF4444;
+}
+
+.red-btn i {
+  color: #EF4444;
+}
